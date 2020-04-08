@@ -28,13 +28,12 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
-  title = args[:title]
-  date = args (:date)
+  #title = args[:title]
+
   
   Movie.create do |m|
-    m.title = title 
-    binding.pry
-    m.release_date = date
+    m.title = args[:title] 
+    m.release_date = args[:release_date]
       end
 end
 
