@@ -4,6 +4,7 @@
 # def make_a_new_movie_instance    # def make_a_new_movie_instance
 #   movie = __                     #   movie = Movie.new
 # end                              # end
+require 'pry'
 
 def can_be_instantiated_and_then_saved
   movie = Movie.new
@@ -29,7 +30,7 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
   # release_date == 1990
   
   Movie.create do |m|
-    m.title = args.value 
+    m.title = args.title 
     binding.pry
     m.release_date = @release_date
       end
